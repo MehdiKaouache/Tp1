@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>La liste des tâches</title>
+        <link rel="stylesheet" target=_blank href="./CSS/index.css">
+        <link rel="shortcut icon" href="Images/logo_login.jpg" type="image/x-icon">
+    </head>
+
+    <body>
+<div id="divParent">
+    <!------------------------------------------------------- Formulaire d'inscription ------------------------------------------------------->
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">S'inscrire</button>
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <form class="modal-content" action="javascript:void(0);">
+            <div class="container">
+                
+                <h1>S'inscrire</h1>
+                <p>Veuillez remplir ce formulaire pour créer un compte.</p>
+                <hr>
+                
+                <label for="email"><b>E-mail</b></label>
+                <input type="text" placeholder="Entrez votre e-mail" id="email" required>
+                
+                <label for="register-psw"><b>Mot de passe</b></label>
+                <input type="password" placeholder="Entrer le mot de passe" id="register-psw" required>
+                
+                <label for="psw-repeat"><b>Répéter le mot de passe</b></label>
+                <input type="password" placeholder="Répéter le mot de passe" id="psw-repeat" required>
+                
+                <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Annuler</button>
+                    <button type="button" onclick="register()" class="signupbtn">S'inscrire</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!---------------------------------------------------- Formulaire de connexion ----------------------------------------------------->
+    <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Se connecter</button>
+    <div id="id02" class="modal">
+        <form class="modal-content animate" action="javascript:void(0);">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="./Images/img_avatar2.png" alt="Avatar" class="avatar">
+            </div>
+            
+            <div class="container">
+                <label for="uname"><b>Nom d'utilisateur</b></label>
+                <input type="text" placeholder="Saisissez votre nom d'utilisateur" id="uname" required>
+                
+                <label for="login-psw"><b>Mot de passe</b></label>
+                <input type="password" placeholder="Entrer le mot de passe" id="login-psw" required>
+                
+                <button type="button" onclick="userInfo()">Se connecter</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Souviens-toi de moi
+                </label>
+            </div>
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Annuler</button>
+                <span class="psw">Mot de passe <a href="#">oublié?</a></span>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="./JavaScript/index.js"></script>
+</body>
+</html>

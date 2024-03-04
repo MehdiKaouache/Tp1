@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Accueil</title>
+        <link rel="stylesheet" target=_blank href="./CSS/style.css">
+        <link rel="shortcut icon" href="Images/logo_accueil.png" type="image/x-icon">
+    </head>
+
+    <body>
+        <button id="logoutBtn" class="button w3-teal">Déconnexion</button>
+        <!-------------------------------------- Sidebar --------------------------------------->
+        <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+            <button onclick="w3_close()">Close &times;</button>
+        <div id="div1"> <a href="#" class="w3-bar-item button">Groupe de tâches "1"</a></div>
+        <div id="div2"><a href="#" class="w3-bar-item button">Groupe de tâches "2"</a></div>
+        <div id="div3"><a href="#" class="w3-bar-item button">Groupe de tâches "3"</a></div>
+        </div>
+        <!-------------------------------------- Bouton de la barre latérale --------------------------------------->
+        <div class="w3-teal">
+            <button class="button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+            <div class="w3-container">
+            </div>
+        </div>
+
+        <!-------------------------------------- Listes des tâches --------------------------------------->
+        <div class="container">
+            <div class="centrerhaut">        
+                <h1>Ma Liste de tâches</h1>
+                <input type="text" id="taskInput" placeholder="Nouvelle tâche...">
+                <button id="addTask">Ajouter</button> 
+                <button id="sortTasks">Trier</button>
+            </div>
+            <ul id="taskList"></ul>
+            <button id="clearAll">Effacer LocalStorage</button>
+        </div>
+    
+        <script src="./JavaScript/script.js"></script>
+    
+    </body>
+
+</html>
+
+
+
+
